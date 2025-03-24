@@ -3,6 +3,7 @@ import React from 'react';
 import {About, Footer, Work, Skills, Header, Testimonial} from "./container";
 import {Nav_Bar} from "./components";
 
+import './App.scss'
 const App = () => {
     return(
         <div className="app">
