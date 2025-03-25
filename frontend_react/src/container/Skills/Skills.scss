@@ -43,6 +43,16 @@
   }
 }
 
+.app__skills-list-skillonly {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 0;
+}
+
 .app__skills-item{
   flex-direction: column;
   text-align: center;

@@ -80,7 +80,7 @@ const Skills = () => {
             <>
                 <h2 className="head-text">Skills</h2>
                 <div className='app__skills-container-skillonly'>
-                    <motion.div className='app__skills-list'>
+                    <motion.div className='app__skills-list-skillonly'>
                         {skills?.map((skill) => (
                             <motion.div
                                 whileInView={{opacity: [0,1]}}
