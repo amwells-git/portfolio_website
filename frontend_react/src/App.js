@@ -5,6 +5,7 @@ import {Nav_Bar} from "./components";
 
 import './App.scss'
 const App = () => {
+    // uncomment Testimonial when testimonials are provided
     return(
         <div className="app">
             <Nav_Bar/>
@@ -12,7 +13,7 @@ const App = () => {
             <About/>
             <Work/>
             <Skills/>
-            <Testimonial/>
+            {/*<Testimonial/>*/}
             <Footer/>
         </div>
     )
