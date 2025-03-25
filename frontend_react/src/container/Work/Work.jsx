@@ -22,7 +22,18 @@ const Work = () => {
     }, []);
 
     const handleWorkFilter = (item) => {
+        setActiveFilter(item);
+        setAnimateCard([{y: 100, opacity: 0}])
 
+        setTimeout(() => {
+            setAnimateCard([{y: 0, opacity: 1}])
+
+            if (item === 'All') {
+                setFilterWork(works)
+            } else {
+                setFilterWork(works.filter((work) => work.tags.includes(item)))
+            }
+        }, 500)
     }
 
     return (
@@ -49,8 +60,10 @@ const Work = () => {
                         <div className="app__work-img app__flex">
                             <img src={urlFor(work.imgUrl)} alt={work.name}/>
                             <motion.div
+                                initial={{opacity: 0}}
+                                animate={{opacity: 0}}
                                 whileHover={{opacity: [0,1]}}
-                                transition={{duration: 0.25, ease: "easeInOut", staggerChildren: 0.5}}
+                                transition={{duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5}}
                                 className="app__work-hover app__flex">
                                 <a href={work.projectLink} target="_blank" rel="noreferrer">
                                     <motion.div
